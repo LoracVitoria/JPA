@@ -73,4 +73,14 @@ public class Veiculo {
     public int hashCode() {
         return Objects.hash(getId(), getNome(), getMarca(), getAnoFabricacao());
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", marca='" + marca + '\'' +
+                ", anoFabricacao=" + anoFabricacao +
+                '}';
+    }
 }

@@ -29,10 +29,10 @@ public class App {
         buscado.setNome("Clio 1.0");
         entityManager.remove(buscado);
 
-        Query q = entityManager.createNativeQuery("select * from tb_veiculos");
+        Query q = entityManager.createNativeQuery("select * from tb_veiculos", Veiculo.class);
         List<Veiculo> veiculos = ((Query) q).getResultList();
         for (Veiculo veiculo : veiculos){
-
+            System.out.println(veiculo);
         }
         entityManager.getTransaction().commit();
         entityManager.close();
